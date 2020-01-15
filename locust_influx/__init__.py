@@ -72,6 +72,7 @@ def __listen_for_requests_events(node_id, success, measurement: str = 'locust_re
         fields = {
             'response_time': response_time,
             'response_length': response_length,
+            'success_status': success,
             'counter': 1,  # TODO: Review the need of this field
         }
         point = __make_data_point(measurement, tags, fields, time)
